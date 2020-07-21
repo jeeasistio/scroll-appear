@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: linear-gradient(90deg, var(--black), var(--white));
+}
+
+.header {
+  grid-area: hdr;
+}
+.main {
+  grid-area: mn;
+}
+.footer {
+  grid-area: ftr;
+}
+
+.container {
+  grid-template-areas: "hdr hdr hdr"
+    "mn mn mn"
+    "ftr ftr ftr";
+}
+
+:root {
+  --black: #16222a;
+  --white: #3a6073;
+}
+
+.header {
+  height: 100vh;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 20vh;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+.nav a,
+.footer a {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 15px;
+  font-family: "Lato", serif;
+}
+
+.welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  font: 50px "Lato", serif;
+  color: whitesmoke;
+}
+
+.intro {
+  height: 100vh;
+}
+
+.intro-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.intro-title h2 {
+  font: 40px "Lato", serif;
+  color: whitesmoke;
+  margin: 40px;
+  text-align: center;
+}
+
+.intro-text {
+  width: 50%;
+  font: 15px "Merriweather", serif;
+  color: whitesmoke;
+  opacity: 0;
+  transform: translatey(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+.intro-text h2 {
+  margin: 5px;
+  font: 20px "Lato", serif;
+}
+
+.intro-text p {
+  font-family: "Merriweather", serif;
+}
+
+img {
+  width: 200px;
+  height: auto;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: hsl(204, 31.3%, 11.5%);
+  height: 18vh;
+  padding: 5px 25px;
+}
+
+.footer small {
+  color: whitesmoke;
+  font: 15px "Merriweather", serif;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.footer a {
+  padding: 5px;
+}
+
+.intro-appear {
+  opacity: 1;
+  transform: translatey(0px);
+}
